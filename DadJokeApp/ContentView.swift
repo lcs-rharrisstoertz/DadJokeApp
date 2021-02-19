@@ -14,12 +14,18 @@ struct ContentView: View {
     
     // MARK: Computed Properties
     var body: some View {
-        Text(someText)
-            .padding()
-            .onAppear() {
-                //Invoke the function to get a joke
+        
+        VStack{
+            Text(someText)
+                .padding()
+                .onAppear() {
+                    //Invoke the function to get a joke
+                    fetchJoke()
+                }
+            Button("Get another joke") {
                 fetchJoke()
             }
+        }
     }
     
     // MARK: Functions
